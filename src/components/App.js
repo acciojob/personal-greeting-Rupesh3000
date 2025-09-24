@@ -2,15 +2,17 @@ import React, { useState } from "react";
 import "./../styles/App.css";
 
 const App = () => {
-  const [inputValue, setInputValue] = useState("");
-  const handleGreeting = (event) => {
-    setInputValue(event.target.value);
-  };
+  const [name, setName] = useState("");
+
   return (
-    <div>
-      <input type="text" onChange={handleGreeting} />
-      {inputValue && `Hello, ${inputValue}!`}
-      
+    <div className="App">
+      <input
+        type="text"
+        placeholder="Enter your name"
+        value={name}
+        onChange={(e) => setName(e.target.value)}
+      />
+      <p>{name && `Hello, ${name}!`}</p>
     </div>
   );
 };
