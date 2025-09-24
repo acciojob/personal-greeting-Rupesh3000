@@ -9,7 +9,8 @@ const App = () => {
   return (
     <div>
       <input type="text" onChange={handleGreeting} />
-      <p>{inputValue && `Hello, ${inputValue}!`}</p>
+      {inputValue && `Hello, ${inputValue}!`}
+      
     </div>
   );
 };
